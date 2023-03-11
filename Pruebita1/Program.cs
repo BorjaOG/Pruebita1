@@ -16,7 +16,7 @@ namespace Pruebita1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Quote());
+            Application.Run(new BeautySA());
         }
     }
 }

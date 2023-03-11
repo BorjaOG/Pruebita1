@@ -31,16 +31,36 @@ namespace Pruebita1
                 MessageBox.Show("All good, Bye", tittle);
                 this.Close();
             }
-            
+
+            CmbPosition.Items.Add("Medicare");
+            CmbPosition.Items.Add("Bupa");
+            CmbPosition.Items.Add("OSHC");
+            CmbPosition.Items.Add("None");
+
+
         }
         private void btnSaludar_Click(object sender, EventArgs e)
         {
-            string texto = txtNombre.Text + " " + txbSurname.Text;
-            string reason = txtreason.Text;           
-            DateTime date = dt1.Value;
-            lblSaludo.Text = " Hola " + texto + ", el dia " + date + " te contactamos con motivo de tu consulta:  " + reason;
+            string Name = txtNombre.Text + " " + txbSurname.Text;
+            string Reason = txtreason.Text;           
+            DateTime Date = dt1.Value;
+            string Married = ChbMarried.Checked == true ? "married": "single";          
+            string Insurance = CmbPosition.SelectedItem.ToString();
+            string Kids = NmKids.Text;
+            string Nationality;
+
+            if (RbAussie.Checked)
+                Nationality = "Aussie";
+            else
+                Nationality = "other than Australian";
+
+
+            string Message =  Name + ", born on the " + Date + ", with nationality  " + Nationality + " , " + Married + ", with " + Kids + " kids " + " and " + Insurance + "insurance,  we are contacting you because you have told us:  " + Reason + "do you wish to confirm your appointment?";
+
            
+            MessageBox.Show(Message);
         }
+
 
     }
 }
