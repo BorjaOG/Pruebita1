@@ -58,7 +58,7 @@
             this.btnSaludar.Name = "btnSaludar";
             this.btnSaludar.Size = new System.Drawing.Size(127, 47);
             this.btnSaludar.TabIndex = 0;
-            this.btnSaludar.Text = "Confirmar";
+            this.btnSaludar.Text = "Confirm";
             this.btnSaludar.UseVisualStyleBackColor = false;
             this.btnSaludar.Click += new System.EventHandler(this.btnSaludar_Click);
             // 
