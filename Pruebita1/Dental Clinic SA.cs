@@ -22,7 +22,7 @@ namespace Pruebita1
             Quote window = new Quote();
             window.ShowDialog();
 
-            // signos?
+            
         }
     }
 }
